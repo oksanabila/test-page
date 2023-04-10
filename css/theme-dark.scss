@@ -1,0 +1,21 @@
+[data-bs-theme=dark] {
+  header {
+    .nav-link {
+      color: $white;
+      &.active {
+        color: $white;
+      }
+    }
+  }
+
+  .btn-outline-dark {
+    color: var(--bs-light-text-emphasis);
+    background-color: transparent;
+  }
+
+  .btn-check:checked + .btn {
+    color: var(--bs-dark-text-emphasis);
+    background-color: var(--bs-light-bg-subtle);
+    border-color: var(--bs-light-bg-subtle);
+  }
+}

@@ -1,0 +1,26 @@
+.card {
+  --bs-card-border-color: #{$borders-div};
+}
+
+.card-img-wrap {
+  height: px-to-rem(200px);
+  overflow: hidden;
+}
+
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  &.more {
+    display: block;
+    &.show-more {
+      display: none;
+    }
+  }
+}
+
+.show-more {
+  text-decoration: unset;
+}

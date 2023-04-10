@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="css/style.css" rel="stylesheet" media="all"  type="text/css">
+    <title>Test page</title>
+</head>
+<body>
+<header class="mb-4 mb-lg-5 py-3 py-lg-0">
+    <div class="container">
+        <div class="row align-items-lg-center">
+            <ul class="nav col-lg-4 d-none d-lg-flex">
+                <li><a href="#" class="nav-link px-0 py-3 active">Photos</a></li>
+                <li><a href="#" class="nav-link px-0 py-3">Videos</a></li>
+                <li><a href="#" class="nav-link px-0 py-3">Podcasts</a></li>
+            </ul>
+            <div class="col-10 col-md-8 col-lg-5">
+                <form class="search-wrap">
+                    <i class="search-icon"></i>
+                    <input type="search" class="form-control" placeholder="Search for anything..." aria-label="Search">
+                </form>
+            </div>
+            <div class="col-lg-1 d-none d-lg-block">
+                <div class="form-check form-switch align-items-center">
+                    <label class="form-check-label text-secondary" for="flexSwitchCheckDefault1"></label>
+                    <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault1"
+                           onclick="toggleTheme()">
+                </div>
+            </div>
+            <ul class="nav justify-content-end col-lg-2 d-none d-lg-flex">
+                <li class="ps-0 dropdown">
+                    <a class="nav-link dropdown-toggle px-0 ps-0" href="#" id="navbarDropdownMenuLink" role="button"
+                       data-bs-toggle="dropdown" aria-expanded="false">
+                        English
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="dropdown-item" href="#">Ukrainian</a></li>
+                        <li><a class="dropdown-item" href="#">German</a></li>
+                        <li><a class="dropdown-item" href="#">French</a></li>
+                    </ul>
+                </li>
+                <li class="pe-0">
+                    <a href="#" class="nav-link px-0 pe-0">Sign in</a>
+                </li>
+            </ul>
+            <div class="col-2 col-md-4 d-flex d-lg-none justify-content-end">
+                <button class="btn btn-link px-0" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" onclick="handleClick()">
+                    <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22px" height="16px"
+                         viewBox="0 0 22 16" enable-background="new 0 0 22 16" xml:space="preserve" fill="#666666">
+                            <rect y="0" width="22" height="2"></rect>
+                        <rect y="7" width="22" height="2"></rect>
+                        <rect y="14" width="22" height="2"></rect>
+                        </svg>
+                </button>
+            </div>
+
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" data-bs-scroll="true"
+                 aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 id="offcanvasRightLabel" class="text-secondary fw-bold">Menu</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                            aria-label="Закрыть"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="nav flex-column">
+                        <li class="px-0"><a href="#" class="nav-link px-0 py-3 active">Photos</a></li>
+                        <li class="px-0"><a href="#" class="nav-link px-0 py-3">Videos</a></li>
+                        <li class="px-0"><a href="#" class="nav-link px-0 py-3">Podcasts</a></li>
+                        <li class="px-0 dropdown">
+                            <a class="nav-link dropdown-toggle px-0 py-3" href="#" id="navbarDropdownMenuLink2"
+                               role="button"
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
+                                <li><a class="dropdown-item" href="#">Ukrainian</a></li>
+                                <li><a class="dropdown-item" href="#">German</a></li>
+                                <li><a class="dropdown-item" href="#">French</a></li>
+                            </ul>
+                        </li>
+                        <li class="px-0"><a href="#" class="nav-link px-0 py-3">Sign in</a></li>
+                    </ul>
+
+                    <div class="form-check form-switch">
+                        <label class="form-check-label text-secondary" for="flexSwitchCheckDefault">Day/Night
+                            theme</label>
+
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                               onclick="toggleTheme()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3 nav flex-lg-column nav-pills pt-lg-2 mb-5 justify-content-between justify-content-lg-start"
+             id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <button class="nav-link fw-bold pills-with-icon active" id="v-pills-photos-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-photos"
+                    type="button" role="tab" aria-controls="v-pills-photos" aria-selected="true">
+                <svg class="pills-with-icon__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill"
+                          d="M15 6.5C13.6193 6.5 12.5 7.61929 12.5 9C12.5 10.3807 13.6193 11.5 15 11.5C16.3807 11.5 17.5 10.3807 17.5 9C17.5 7.61929 16.3807 6.5 15 6.5Z"
+                          fill="#666666"/>
+                    <path class="fill" fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3 3H21V21H18.5266L18.4945 21.0002H5.5L5.46787 21H3V3ZM19 12.8362C17.8552 13.898 16.7044 14.4537 15 14.4537C13.0944 14.4537 11.6208 13.2859 10.1527 11.7048C9.15108 10.6262 7.51491 10.4335 6.29018 11.25L6.26758 11.2651L5 12.2134V5H19V12.8362Z"
+                          fill="#666666"/>
+                </svg>
+
+                All photos
+            </button>
+            <button class="nav-link fw-bold pills-with-icon" id="v-pills-selfies-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-selfies"
+                    type="button" role="tab" aria-controls="v-pills-selfies" aria-selected="false">
+                <svg class="pills-with-icon__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke"
+                          d="M17.5 12C17.5 15.0376 15.0376 17.5 12 17.5C8.96243 17.5 6.5 15.0376 6.5 12M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          stroke="#666666" stroke-width="2"/>
+                    <path class="fill"
+                          d="M11 9C11 9.82843 10.3284 10.5 9.5 10.5C8.67157 10.5 8 9.82843 8 9C8 8.17157 8.67157 7.5 9.5 7.5C10.3284 7.5 11 8.17157 11 9Z"
+                          fill="#666666"/>
+                    <path class="fill"
+                          d="M16 9C16 9.82843 15.3284 10.5 14.5 10.5C13.6716 10.5 13 9.82843 13 9C13 8.17157 13.6716 7.5 14.5 7.5C15.3284 7.5 16 8.17157 16 9Z"
+                          fill="#666666"/>
+                </svg>
+
+                Selfies
+            </button>
+            <button class="nav-link fw-bold pills-with-icon" id="v-pills-recent-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-recent"
+                    type="button" role="tab" aria-controls="v-pills-recent" aria-selected="false">
+                <svg class="pills-with-icon__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path class="stroke"
+                          d="M12 8V12L14.5 14.5M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
+                          stroke="#666666" stroke-width="2" stroke-linecap="square"/>
+                </svg>
+
+                Recent
+            </button>
+            <button class="nav-link fw-bold pills-with-icon" id="v-pills-deleted-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-deleted"
+                    type="button" role="tab" aria-controls="v-pills-deleted" aria-selected="false">
+                <svg class="pills-with-icon__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill"
+                          d="M6 21L5.00221 21.0665L5.06445 22H6V21ZM18 21V22H18.9356L18.9978 21.0665L18 21ZM3 5H2V7H3V5ZM21 7H22V5H21V7ZM11 11V10H9V11H11ZM9 16V17H11V16H9ZM15 11V10H13V11H15ZM13 16V17H15V16H13ZM4.00221 6.06652L5.00221 21.0665L6.99779 20.9335L5.99779 5.93348L4.00221 6.06652ZM6 22H18V20H6V22ZM18.9978 21.0665L19.9978 6.06652L18.0022 5.93348L17.0022 20.9335L18.9978 21.0665ZM19 5H5V7H19V5ZM3 7H5V5H3V7ZM19 7H21V5H19V7ZM9 11V16H11V11H9ZM13 11V16H15V11H13ZM12 4C13.3965 4 14.5725 4.95512 14.9055 6.24926L16.8424 5.75074C16.2874 3.59442 14.3312 2 12 2V4ZM9.09445 6.24926C9.42754 4.95512 10.6035 4 12 4V2C9.66883 2 7.71258 3.59442 7.15758 5.75074L9.09445 6.24926Z"
+                          fill="#666666"/>
+                </svg>
+
+                Deleted
+            </button>
+        </div>
+        <div class="offset-lg-1 col-lg-8 tab-content" id="v-pills-tabContent">
+            <section class="tab-pane fade show active" id="v-pills-photos" role="tabpanel"
+                     aria-labelledby="v-pills-photos-tab">
+                <div class="d-flex flex-wrap align-items-top justify-content-between mb-2">
+                    <div>
+                        <h1>All photos</h1>
+                    </div>
+                    <div>
+                        <div class="btn-group pt-lg-2" role="group" aria-label="Basic radio toggle button group">
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                   checked>
+                            <label class="btn btn-outline-dark border-gray fw-bold" for="btnradio1">Newest</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-dark border-gray fw-bold" for="btnradio2">Latest</label>
+                        </div>
+                    </div>
+                </div>
+                <p class="items-count text-secondary">150 items</p>
+                <div class="row" id="#cardsList">
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrap">
+                                <img src="https://picsum.photos/id/1/5000/3333" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Card title</h4>
+                                <p class="card-text text-secondary mb-2">
+                                    Here goes some sample, example text that is
+                                    relatively short.
+                                </p>
+                                <a class="link-dark show-more showMore d-none" href="javascript:void(0)">
+                                    Show more...
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent py-3 d-flex">
+                                <a href="#" class="btn btn-primary me-3">Go somewhere</a>
+                                <a href="#" class="btn btn-outline-dark border-gray">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrap">
+                                <img src="https://picsum.photos/id/2/5000/3333" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Card title</h4>
+                                <p class="card-text text-secondary mb-2">
+                                    If there are more than two lines in the text, a "show more" button should appear,
+                                    which, when clicked, will expand the entire text (make random text from two to ten
+                                    lines long).
+                                </p>
+                                <a class="link-dark show-more showMore d-none" href="javascript:void(0)">
+                                    Show more..
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent py-3 d-flex">
+                                <a href="#" class="btn btn-primary me-3">Go somewhere</a>
+                                <a href="#" class="btn btn-outline-dark border-gray">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrap">
+                                <img src="https://picsum.photos/id/3/5000/3333" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Card title</h4>
+                                <p class="card-text text-secondary mb-2">
+                                    And here full text doesn’t fit, and at the very end of it we should show a
+                                    truncation.
+                                </p>
+                                <a class="link-dark show-more showMore d-none" href="javascript:void(0)">
+                                    Show more...
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent py-3 d-flex">
+                                <a href="#" class="btn btn-primary me-3">Go somewhere</a>
+                                <a href="#" class="btn btn-outline-dark border-gray">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="card h-100">
+                            <div class="card-img-wrap">
+                                <img src="https://picsum.photos/id/4/5000/3333" class="card-img-top" alt="...">
+                            </div>
+                            <div class="card-body">
+                                <h4 class="card-title fw-bold">Card title</h4>
+                                <p class="card-text text-secondary mb-2">
+                                    And here full text doesn’t fit, and at the very end of it we should show a
+                                    truncation.
+                                </p>
+                                <a class="link-dark show-more showMore d-none" href="javascript:void(0)">
+                                    Show more...
+                                </a>
+                            </div>
+                            <div class="card-footer bg-transparent py-3 d-flex">
+                                <a href="#" class="btn btn-primary me-3">Go somewhere</a>
+                                <a href="#" class="btn btn-outline-dark border-gray">Share</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section class="tab-pane fade" id="v-pills-selfies" role="tabpanel" aria-labelledby="v-pills-selfies-tab">
+                <h1>Selfies</h1>
+            </section>
+            <section class="tab-pane fade" id="v-pills-recent" role="tabpanel" aria-labelledby="v-pills-recent-tab">
+                <h1>Recent</h1>
+            </section>
+            <section class="tab-pane fade" id="v-pills-deleted" role="tabpanel" aria-labelledby="v-pills-deleted-tab">
+                <h1>Deleted</h1>
+            </section>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+<script src="./js/script.js" type="application/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+  font-family: 'Commissioner', sans-serif;
+}
+
+h1 {
+  font-weight: $font-weight-bold;
+}
+
+.nav {
+  li {
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    padding-right: calc(var(--bs-gutter-x) * .5);
+  }
+}
+
+.pills-with-icon {
+  $parent: &;
+  text-align: left;
+  &.active {
+    #{$parent}__icon {
+      .fill {
+        fill: $white;
+      }
+      .stroke {
+        stroke: $white;
+      }
+    }
+  }
+  &__icon {
+    margin-right: px-to-rem(12px);
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    width: 7px;
+    height: 7px;
+    border-top: unset;
+    border-right: 2px solid $secondary;
+    border-bottom: 2px solid $secondary;
+    border-left: unset;
+    transform: rotate(45deg);
+    margin-left: px-to-rem(7px);
+  }
+  &.show {
+    &:after {
+      vertical-align: 1px;
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.btn {
+  font-weight: $btn-font-weight;
+  &-primary {
+    color: $white;
+  }
+}
+
+.btn-outline-dark.border-gray {
+  border-color: $borders-div;
+  border-width: 2px;
+  &:hover {
+    border-color: $dark;
+  }
+}
+
+.items-count {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-bold;
+}
+
+
+@include media-breakpoint-down(md) {
+  .pills-with-icon {
+    &__icon {
+      width: px-to-rem(20px);
+      height: px-to-rem(20px);
+      margin-right: px-to-rem(4px);
+    }
+  }
+}
+@include media-breakpoint-down(sm) {
+  .pills-with-icon {
+    &__icon {
+      display: none;
+    }
+  }
+}
+
+@include media-breakpoint-only(xs) {
+  .pills-with-icon {
+    padding-left: px-to-rem(6px);
+    padding-right: px-to-rem(6px);
+  }
+}

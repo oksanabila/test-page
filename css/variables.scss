@@ -1,0 +1,19 @@
+@import "../node_modules/bootstrap/scss/functions";
+
+$white: #FFFFFF;
+$primary: #ED7135;
+$secondary: #666666;
+$dark: #292929;
+$body-color: #292929;
+$nav-link-color: $dark;
+$nav-pills-link-active-color: $white;
+$dropdown-link-color: $secondary;
+$nav-link-color: $secondary;
+$border-radius: .5rem;
+$btn-font-weight: bold;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+$borders-div: #EBEBEB;
+$gray1: #EEEEEE;
+$fontBase: 16px;
